@@ -15,7 +15,7 @@ warning('off'); % Don't show all the warnings
 %% Produce data for a defined glucose, nitrogen combination
 
 % choose the folder name where the data is saved
-foldername = 'test4';
+foldername = '-NitrTo+Nitr-Gluc+Crosstalk';
 % define all knockouts, i.e. {'Snf1', 'Tor1'}
 knockouts = {};
 % define all active crosstalks out of 13, i.e. 
@@ -25,8 +25,8 @@ knockouts = {};
 % set glucose and nitrogen level sequence
 % both have to have the same length, and each entry corresponds to one
 % 'time step'
-glucoseLevels = [1 0];
-nitrogenLevels = [0 0];
+glucoseLevels = [0 0];
+nitrogenLevels = [0 1];
 
 % run logic model and create txt files and pictures with data in the
 % defined folder
