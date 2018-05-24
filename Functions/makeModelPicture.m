@@ -23,13 +23,13 @@ function makeModelPicture(path, dataName)
     plotEmptyCell();
 
     % define coordinates for certain positions in the cell
-    nProteinsMembranebound = sum(data.localization == 0);
-    nProteinsInCytosol = sum(data.localization == 1);
+    nProteinsMembranebound = sum(data.presence == 1 & data.localization == 0);
+    nProteinsInCytosol = sum(data.presence == 1 & data.localization == 1);
     if tag == 1
-        nProteinsNucleus = sum(((data.localization == 2) + (data.DNA_binding == 0)) == 2);
+        nProteinsNucleus = sum(((data.presence == 1 & data.localization == 2) + (data.DNA_binding == 0)) == 2);
         nProteinsNucleusDNA_binding = sum(((data.localization == 2) + (data.DNA_binding == 1)) == 2);
     else
-        nProteinsNucleus = sum(data.localization == 2);
+        nProteinsNucleus = sum(data.presence == 1 & data.localization == 2);
         nProteinsNucleusDNA_binding = 0;
     end
 
@@ -44,7 +44,7 @@ function makeModelPicture(path, dataName)
     for itP = 1:nProteins
         proteinName = data.Name{itP};
 
-        if data.presence(itP) >= 1 % only go on if protein is presencent
+        if data.presence(itP) >= 1 % only go on if protein is present
 
             % check localizationation 
             % either in (1) nucleus, (2) in nucleus and DNA bound, (3) in cytosol or

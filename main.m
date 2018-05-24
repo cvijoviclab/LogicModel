@@ -20,7 +20,7 @@ foldername = '-NitrTo+Nitr-Gluc+Crosstalk';
 knockouts = {};
 % define all active crosstalks out of 13, i.e. 
 % crosstalks = [0 0 0 0 0 0 0 0 0 0 0 0 0]; 
- crosstalks = [1 1 1 1 1 1 1 1 1 1 1 1 1]; 
+crosstalks = [1 1 1 1 1 1 1 1 1 1 1 1 1]; 
 
 % set glucose and nitrogen level sequence
 % both have to have the same length, and each entry corresponds to one
