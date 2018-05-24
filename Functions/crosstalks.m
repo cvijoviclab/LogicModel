@@ -85,7 +85,7 @@ function [Metabolites, Miscl, Snf1pw, R2S3pw, PKApw, TORpw, placeholders] = ...
         placeholders(2) = 0;
     elseif (activeCrosstalk(10)==1) && (TORpw{3,2}==1) && (Miscl{9,2}==1) && Metabolites{1,2} == 1
         TORpw{3,4} = 0;
-    end % under glucose starvation phos. Snf1 phosphorelates Kog1, PMID: 28096180, otherwise it is phosphorelated by an unknown mechanism Xxx6
+    end % under glucose starvation phos. Snf1 phosphorelates Kog1, PMID: 28096180, otherwise it is dephosphorelated by an unknown mechanism Xxx6
     
     if (activeCrosstalk(10)==1) && (Snf1pw{1,2}==1) && (Snf1pw{1,4}==1) && ...
             (TORpw{12,2}==1)
