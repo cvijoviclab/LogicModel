@@ -407,7 +407,7 @@ while true
     end 
 
     %%% Tap42 dephosphorylated by PP2A and no TORC1, PMID: 22964838,
-    %%% 22174183,﻿24738657
+    %%% 22174183, ﻿26439012!﻿24738657
     if (placeholders(2) == 0) && (TORpw{6,2} ==1) && (TORpw{7,2} ==1)
         TORpw{6,4} = 0;
     end
