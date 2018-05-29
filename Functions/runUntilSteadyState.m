@@ -363,7 +363,7 @@ while true
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
     %%% in nitrogen starvation and glucose Par32 gets phosphorylated by
-    %%% Gtr1 and Npr2, PMID:﻿25085507
+    %%% Gtr1 and Npr2, PMID:???25085507
     if (Metabolites{4,2} == 0) && (Metabolites{1,2} == 1) && (TORpw{13,2}== 1) && (TORpw{14,2}== 1) && (TORpw{15,2}== 1)
         TORpw{13,4} = 1;
     end
@@ -407,7 +407,7 @@ while true
     end 
 
     %%% Tap42 dephosphorylated by PP2A and no TORC1, PMID: 22964838,
-    %%% 22174183,﻿24738657
+    %%% 22174183,???24738657
     if (placeholders(2) == 0) && (TORpw{6,2} ==1) && (TORpw{7,2} ==1)
         TORpw{6,4} = 0;
     end
@@ -437,18 +437,18 @@ while true
             TORpw{11,3} = 2;
             TORpw{11,6} = 1;
         end
-    else %Gln3 is going back to the cytosol if the PP2A branch is inactivated and there is no Snf1 that would put it in again (no glucose, nitrogen, crosstalk(10) is on), has to be here: looping problem otherwise
+    else %Gln3 is in the cytosol if the PP2A branch is inactivated and there is no Snf1 that would put it in again (no glucose, crosstalk(10) is on), has to be here: looping problem otherwise
         if TORpw{10,2} == 1
             TORpw{10,4} = 1;
         end
-        if TORpw{11,2} == 1 && TORpw{10,2} == 1 && TORpw{10,4} == 1 && ~(Metabolites{4,2} == 1 && Metabolites{1,2} == 0 && activeCrosstalks(10) == 1)
+        if TORpw{11,2} == 1 && TORpw{10,2} == 1 && TORpw{10,4} == 1 && ~(Metabolites{1,2} == 0 && activeCrosstalks(10) == 1)
             TORpw{11,4} = 1;
             TORpw{11,3} = 1;
             TORpw{11,6} = 0;
         end
     end
 
-    %%% cytosolar Gln3 cannot express NCR gene
+    %%% cytosolic Gln3 cannot express NCR gene
     if (TORpw{11,2} == 1) && (TORpw{11,3} == 1)
         PromSite{9,2} = 0;
     else

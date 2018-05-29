@@ -73,11 +73,11 @@ function [Metabolites, Miscl, Snf1pw, R2S3pw, PKApw, TORpw, placeholders] = ...
     
 %%%Crosstalk 10%%%
     if (activeCrosstalk(10)==1) && (Snf1pw{1,2}==1) && (Snf1pw{1,4}==1) && ...
-            (Metabolites{4,2} == 1) && (TORpw{11,2}==1)
+            (TORpw{11,2}==1)
         TORpw{11,4} = 1;
         TORpw{11,3} = 2;
         TORpw{11,6} = 1;
-    end % under glucose starvation (but not nitrogen starvation) phos. Snf1 can phosphorelate Gln3 and locate it in the nucleus, it's a different phosphorelation site, and has no connection to the TOR mediated phosphorelation of Gln3, PMID: 11809814,15911613  
+    end % under glucose starvation phos. Snf1 can phosphorelate Gln3 and locate it in the nucleus, it's a different phosphorelation site, and has no connection to the TOR mediated phosphorelation of Gln3, PMID: 11809814,15911613  
     
     if (activeCrosstalk(10)==1) && (Snf1pw{1,2}==1) && (Snf1pw{1,4}==1) && ...
             (TORpw{3,2}==1)
