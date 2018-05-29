@@ -8,7 +8,7 @@ addpath('Functions'); % path to functions that are used
 warning('off'); % Don't show all the warnings
 
 % RULES 
-% metabolite(glucose level: no(0) low(1) high(2), external on/off, nitrogen level: no(0) high(1))
+% metabolite(glucose level: no(0) high(1), external on/off, nitrogen level: no(0) high(1))
 % proteinname(presence, localization nucleus(2); cytosol(1); membrane(0); phosphorylation, guanylation non(0); GDP(1);GTP(2), dna bound)
 % genes(promotor on/off)
 
