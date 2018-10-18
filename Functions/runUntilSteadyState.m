@@ -132,10 +132,10 @@ while true
     end%Rgt2 is a glucose sensor PMID: 8901598, and acts through Yck2 PMID: 14755054
     if (R2S3pw{3,2}==1) && ((R2S3pw{1,2}==1) && (Metabolites{1,2} >= 1)) || ((R2S3pw{2,2}==1) && (Metabolites{1,2} >= 1))
         R2S3pw{3,3}=0;
-    end%Snf3 is a glucose sensor PMID: 8901598, and acts through Yck1 and Yck2PMID: 020594
+    end%Snf3 is a glucose sensor PMID: 8901598, and acts through Yck1 and Yck2 PMID: 020594
     if (R2S3pw{4,2}==1) && ((R2S3pw{1,2}==1) && (Metabolites{1,2} >= 1)) || ((R2S3pw{2,2}==1) && (Metabolites{1,2} >= 1))
         R2S3pw{4,3}=0;
-    end%Snf3 is a glucose sensor PMID: 8901598, and acts through Yck1 and Yck2PMID: 020594
+    end%Snf3 is a glucose sensor PMID: 8901598, and acts through Yck1 and Yck2 PMID: 020594
 
     %%%YCK phosphorylation of Mth1 Std1
     %Yck1/2 is responsible for phosphorylation of Mth1 and Std1 PMID: 14755054

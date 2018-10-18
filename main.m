@@ -6,6 +6,9 @@ close all;  % Close all figures (except those of imtool.)
 clear;  % Erase all existing variables. Or clearvars if you want.
 addpath('Functions'); % path to functions that are used 
 warning('off'); % Don't show all the warnings
+set(groot,'defaulttextinterpreter','latex');  
+set(groot, 'defaultAxesTickLabelInterpreter','latex');  
+set(groot, 'defaultLegendInterpreter','latex'); 
 
 % RULES 
 % metabolite(glucose level: no(0) high(1), external on/off, nitrogen level: no(0) high(1))
