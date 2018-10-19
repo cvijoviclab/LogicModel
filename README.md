@@ -19,14 +19,14 @@ Involved functions: initializeModel.m, knockouts.m, runUntilSteadyState.m, cross
 
 
 (3) SAVING AND PLOTTING
-In the last step, saveAndPlot.m saves the data and schematic pictures are created. The functions are mainly for plotting and have nothing to do with the model itself.
+In the last step, saveAndPlot.m saves the data and schematic pictures are created and saved in the Data folder. The functions are mainly for plotting and have nothing to do with the model itself.
 
 Involved functions: arrowCoordinates,.m, ellipseMaker.m, getProteinPosition.m, getNameTag.m, includeProtein.m, makeModelPicture.m, plotEmptyCell.m, rectangleMaker.m, saveAndPlot.m
 
 
 
 (4) EXAMPLE: CROSSTALK TESTING
-In the folder Crosstalk Simulation the files main.m and mainTOR.m are provided which reproduce comparisons between the model with and without crosstalk and gapfilling, as well as the effect of all possible combinations of crosstalks on the gene expression in the model.
+In the folder Crosstalk Simulation the files main.m and mainTOR.m are provided which reproduce comparisons between the model with and without crosstalk and gapfilling, as well as the effect of all possible combinations of crosstalks on the gene expression in the model. Output files are created in the Data folder. To save computation time the pictures of the individual pathways are not created. 
 
 
 
