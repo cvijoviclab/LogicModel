@@ -9,7 +9,7 @@ main.m is the main function of the logic model. Here the glucose and the nitroge
 
 
 
-(2) THE MODEL FUNCTION
+(2) THE MODEL
 
 runLogicModel.m intializes the model and loops through all boolean operations, specified in runUntilSteadyState.m and crosstalk.m, until the logial steady state is reached. Knockouts are proteins whose presence is set to 0 after the initialization and stays 0 throughout the whole procedure. 
 If the input is more than one step (e.g. glucoseLevels = [1 0 1 0]) the model also successively loops over this sequence, with the output of each step being the input to the next step. Thus, the initalization is only done in the very beginning to provide a starting point.
